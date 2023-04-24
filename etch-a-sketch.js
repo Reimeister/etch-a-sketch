@@ -1,5 +1,7 @@
-let columns = 16;
-let rows = 16;
+let columns = 100;
+let rows = 100;
+let rowHeight = 600 / rows - 2; //formula to calculate the height of each individual row
+//flexbox creates base for columns and container, but JS is more reliable to create rows
 
 let container = document.createElement("div");
 container.className = "container";
@@ -14,6 +16,7 @@ function createGrid() {
       //loop for rows to complete grid
       let row = document.createElement("div");
       row.className = "row";
+      row.style.height = `${rowHeight}px`; //dynamically changes height according to the dimensions of the grid
       row.addEventListener("mouseover", function (e) {
         row.style.backgroundColor = "black";
       });

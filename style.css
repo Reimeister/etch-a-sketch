@@ -7,23 +7,20 @@ body {
 
 .container {
   display: flex;
-  width: fit-content;
-  height: fit-content;
+  width: 600px;
+  height: 600px;
   border-bottom: 2px solid black;
   border-right: 2px solid black;
+  flex-wrap: wrap;
 }
 
 .column {
-  flex: 1;
   border-left: 2px solid black;
-  width: 30px;
-  align-self: start;
+  flex: 1;
 }
 
 .row {
   border-top: 2px solid black;
-  height: 30px;
-  align-self: start;
 }
 
 .header1 {
