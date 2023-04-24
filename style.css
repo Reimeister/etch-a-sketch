@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+}
+
+.column {
+  flex: 1;
+  color: red;
+  /*find border solution*/
+}
+
+.row {
+  /*insert border information here*/
+}
