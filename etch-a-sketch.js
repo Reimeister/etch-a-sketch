@@ -17,7 +17,7 @@ function createGrid() {
       row.className = "row";
       row.style.height = `${rowHeight}px`; //dynamically changes height according to the dimensions of the grid
       row.addEventListener("mouseover", function (e) {
-        row.style.backgroundColor = "black";
+        row.style.backgroundColor = randomColor();
       });
       column.appendChild(row); //attach row to column
     }
@@ -26,6 +26,15 @@ function createGrid() {
 }
 document.body.appendChild(container); //apply grid onto the body of the document
 //attach the 'hover' command to the ROWS, those are what creating the squares individually
+
+function randomColor() {
+  let color = []; //sets up array for RGB value
+  for (let i = 0; i < 3; i++) {
+    //loops three times for three separate values
+    color.push(Math.floor(Math.random() * 256)); //pushes the value of a randomly-generated color value to the array
+  }
+  return "rgb(" + color.join(", ") + ")"; //outputs array values into rbg value ready for our style method
+}
 
 function resetSquares() {
   let container = document.querySelector(".container");
